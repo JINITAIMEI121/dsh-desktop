@@ -31,7 +31,7 @@ jobs:
           set -e
           corepack enable
           yarn install --mode=update-lockfile
-          yarn workspace dsh-plugin-desktop vitest run tests/connection-get-body-mode-patch.spec.ts
+          cd dsh-plugin-desktop && npx vitest run tests/connection-get-body-mode-patch.spec.ts
       - name: Commit and push
         run: |
           set -e
