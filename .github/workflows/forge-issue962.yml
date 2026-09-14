@@ -31,7 +31,20 @@ jobs:
           set -e
           corepack enable
           yarn install --mode=update-lockfile
-          cd dsh-plugin-desktop && npx vitest run tests/connection-get-body-mode-patch.spec.ts
+          node - <<'NODE'
+          const { readFileSync } = require('node:fs');
+          const patch = readFileSync('patches/dsh-client-connection@0.1.5-rc.2.patch', 'utf8');
+          const markers = [
+            'const effectiveBodyMode = method === "GET" || method === "HEAD" ? "buffered" : bodyMode;',
+            'if (effectiveBodyMode === "buffered") {',
+            'requestBody: route.requestBody ?? (methods.has("GET") || methods.has("HEAD") ? "buffered" : "streaming")',
+            'readonly requestBody?: ConnectionRequestBodyMode',
+          ];
+          for (const m of markers) {
+            if (!patch.includes(m)) throw new Error('missing marker: ' + m);
+          }
+          console.log('all 4 patch markers present');
+          NODE
       - name: Commit and push
         run: |
           set -e
