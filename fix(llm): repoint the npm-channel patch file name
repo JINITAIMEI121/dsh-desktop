@@ -37,7 +37,7 @@
     "@deepseek-ai/dsh-util-crypto@npm:^0.2.0-rc.1": "file:vendor/dsh-runtime/0.2.0-rc.1/deepseek-ai-dsh-util-crypto-0.2.0-rc.1.tgz",
     "@deepseek-ai/dsh-util-values@npm:0.2.0-rc.1": "file:vendor/dsh-runtime/0.2.0-rc.1/deepseek-ai-dsh-util-values-0.2.0-rc.1.tgz",
     "@deepseek-ai/dsh-util-values@npm:^0.2.0-rc.1": "file:vendor/dsh-runtime/0.2.0-rc.1/deepseek-ai-dsh-util-values-0.2.0-rc.1.tgz",
-    "@deepseek-ai/dsh-llm": "patch:@deepseek-ai/dsh-llm@npm%3A0.1.5-rc.3#./patches/dsh-llm-npm@0.1.5-rc.2.patch",
+    "@deepseek-ai/dsh-llm": "patch:@deepseek-ai/dsh-llm@npm%3A0.1.5-rc.3#./patches/dsh-llm-npm.patch",
     "@deepseek-ai/dsh-llm@npm:0.2.0-rc.1": "file:vendor/dsh-runtime/0.2.0-rc.1/deepseek-ai-dsh-llm-0.2.0-rc.1.tgz",
     "@deepseek-ai/dsh-llm@npm:^0.2.0-rc.1": "file:vendor/dsh-runtime/0.2.0-rc.1/deepseek-ai-dsh-llm-0.2.0-rc.1.tgz",
     "@deepseek-ai/dsh-scope@npm:0.2.0-rc.1": "file:vendor/dsh-runtime/0.2.0-rc.1/deepseek-ai-dsh-scope-0.2.0-rc.1.tgz",
